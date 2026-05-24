@@ -18,9 +18,9 @@ export default function MovieDetail() {
         setMovie(movieData);
         setShowtimes(showtimeData);
         if (showtimeData.length > 0) {
-          const firstDate = new Date(showtimeData[0].startTime)
-            .toISOString().split("T")[0];
-          setSelectedDate(firstDate);
+          const firstDate = showtimeData?.[0]?.startTime
+  ? new Date(showtimeData[0].startTime)
+  : null;
         }
       })
       .finally(() => setLoading(false));

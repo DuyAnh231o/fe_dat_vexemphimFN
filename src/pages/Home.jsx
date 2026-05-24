@@ -234,7 +234,7 @@ export default function Home() {
     else navigate(`/booking/${id}`);
   };
 
-  const featuredMovie = movies[0] || null;
+const featuredMovie = movies?.[0] || null;
 
   return (
     <div style={{ minHeight: "100vh", background: "#0d0d0d", color: "#f0f0f0" }}>
